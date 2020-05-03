@@ -6,7 +6,7 @@ Just go to "Edit > All your triggers" in the menu bar and create a new trigger t
 function sheetUserLog() {
   
   var email = Session.getActiveUser().getEmail(); //Gets users email.
-  var tss = SpreadsheetApp.openById('1rtOAGcJ3EvE5ab8HwCA_ZnWKv2r-hzu3S8LO59Tne6g'); // Gets the target spreadsheet. Note that the spreadsheet is NOT physically opened on the client side. It is opened on the server only (for modification by the script).
+  var tss = SpreadsheetApp.openById('abc1234567'); // Gets the target spreadsheet by its ID. Note that the spreadsheet is NOT physically opened on the client side. It is opened on the server only (for modification by the script).
   var ts = tss.getSheetByName('openings_log'); //Gets the target sheet.
   var lr = ts.getLastRow() + 1; // Gets the first empty row at the bottom of the range.
   
