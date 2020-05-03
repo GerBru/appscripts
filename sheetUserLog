@@ -1,5 +1,5 @@
 /*
-This script triggers with an installable "on Open" trigger.
+This script is triggered by an installable "on Open" trigger.
 Just go to "Edit > All your triggers" in the menu bar and create a new trigger to set it up.
 */
 
