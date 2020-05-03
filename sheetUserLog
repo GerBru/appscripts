@@ -1,0 +1,17 @@
+/*
+This script triggers with an installable "on Open" trigger.
+Just go to "Edit > All your triggers" in the menu bar and create a new trigger to set it up.
+*/
+
+function sheetUserLog() {
+  
+  var email = Session.getActiveUser().getEmail(); //Gets users email.
+  var tss = SpreadsheetApp.openById('1rtOAGcJ3EvE5ab8HwCA_ZnWKv2r-hzu3S8LO59Tne6g'); // Gets the target spreadsheet. Note that the spreadsheet is NOT physically opened on the client side. It is opened on the server only (for modification by the script).
+  var ts = tss.getSheetByName('openings_log'); //Gets the target sheet.
+  var lr = ts.getLastRow() + 1; // Gets the first empty row at the bottom of the range.
+  
+  // Prints user's email and opening timestamp.
+  ts.getRange(lr, 1).setValue(email);
+  ts.getRange(lr, 2).setValue(new Date());
+  
+}
